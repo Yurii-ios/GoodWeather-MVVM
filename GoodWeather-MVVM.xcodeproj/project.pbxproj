@@ -10,6 +10,9 @@
 		F13E1B2025C36127004CA537 /* WeatherListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13E1B1F25C36127004CA537 /* WeatherListViewModel.swift */; };
 		F16A30CE25C478D10059D95F /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16A30CD25C478D10059D95F /* WeatherModel.swift */; };
 		F16A30D225C47BEC0059D95F /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16A30D125C47BEC0059D95F /* Double+Extensions.swift */; };
+		F16A30DC25C483D60059D95F /* 740-gear-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = F16A30D925C483D60059D95F /* 740-gear-toolbar.png */; };
+		F16A30DD25C483D60059D95F /* 740-gear-toolbar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F16A30DA25C483D60059D95F /* 740-gear-toolbar@3x.png */; };
+		F16A30DE25C483D60059D95F /* 740-gear-toolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F16A30DB25C483D60059D95F /* 740-gear-toolbar@2x.png */; };
 		F1D5106F25C1940600C86AE7 /* WeatherListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D5106E25C1940600C86AE7 /* WeatherListTableViewController.swift */; };
 		F1D5107325C194B600C86AE7 /* AddWeatherCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D5107225C194B600C86AE7 /* AddWeatherCityViewController.swift */; };
 		F1D5107925C1D47A00C86AE7 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D5107825C1D47A00C86AE7 /* WeatherCell.swift */; };
@@ -25,6 +28,9 @@
 		F13E1B1F25C36127004CA537 /* WeatherListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListViewModel.swift; sourceTree = "<group>"; };
 		F16A30CD25C478D10059D95F /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		F16A30D125C47BEC0059D95F /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		F16A30D925C483D60059D95F /* 740-gear-toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "740-gear-toolbar.png"; sourceTree = "<group>"; };
+		F16A30DA25C483D60059D95F /* 740-gear-toolbar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "740-gear-toolbar@3x.png"; sourceTree = "<group>"; };
+		F16A30DB25C483D60059D95F /* 740-gear-toolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "740-gear-toolbar@2x.png"; sourceTree = "<group>"; };
 		F1D5106E25C1940600C86AE7 /* WeatherListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListTableViewController.swift; sourceTree = "<group>"; };
 		F1D5107225C194B600C86AE7 /* AddWeatherCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeatherCityViewController.swift; sourceTree = "<group>"; };
 		F1D5107825C1D47A00C86AE7 /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
@@ -63,6 +69,16 @@
 				F16A30D125C47BEC0059D95F /* Double+Extensions.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		F16A30D825C483D60059D95F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F16A30D925C483D60059D95F /* 740-gear-toolbar.png */,
+				F16A30DA25C483D60059D95F /* 740-gear-toolbar@3x.png */,
+				F16A30DB25C483D60059D95F /* 740-gear-toolbar@2x.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		F1D5106D25C1937A00C86AE7 /* Controllers */ = {
@@ -110,6 +126,7 @@
 		F1EB394925C0C1A0007526A0 /* GoodWeather-MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				F16A30D825C483D60059D95F /* Images */,
 				F13E1B1E25C360E6004CA537 /* ViewModels */,
 				F1D5107725C1D3E100C86AE7 /* CustomCells */,
 				F1D5106D25C1937A00C86AE7 /* Controllers */,
@@ -184,7 +201,10 @@
 			files = (
 				F1EB395725C0C1A1007526A0 /* LaunchScreen.storyboard in Resources */,
 				F1EB395425C0C1A1007526A0 /* Assets.xcassets in Resources */,
+				F16A30DC25C483D60059D95F /* 740-gear-toolbar.png in Resources */,
 				F1EB395225C0C1A1007526A0 /* Main.storyboard in Resources */,
+				F16A30DD25C483D60059D95F /* 740-gear-toolbar@3x.png in Resources */,
+				F16A30DE25C483D60059D95F /* 740-gear-toolbar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
