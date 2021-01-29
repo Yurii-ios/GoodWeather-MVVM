@@ -25,6 +25,7 @@ class AddWeatherCityViewController: UIViewController {
             }
             
             WebService().load(resource: weatherResource) { (result) in
+                
             }
         }
     }
