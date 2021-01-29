@@ -43,4 +43,22 @@ extension WeatherListTableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let navController = segue.destination as? UINavigationController else {
+            fatalError("NavigationController not found.")
+        }
+        
+        guard let addWeatherCityVC = navController.viewControllers.first as? AddWeatherCityViewController else {
+            fatalError("AddWeatherCityViewController not found.")
+        }
+        addWeatherCityVC.delegate = self
+    }
+}
+
+//MARK: - AddWeatherDelegate
+extension WeatherListTableViewController: AddWeatherDelegate {
+    func addWeatherDidSave(viewModel: WeatherViewModel) {
+        print(viewModel.name)
+    }
 }
