@@ -87,7 +87,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
-                                    <action selector="saveCityButtonPressed:" destination="dCM-Zy-BxZ" eventType="touchUpInside" id="ak6-mc-APC"/>
+                                    <action selector="saveCityButtonPressed" destination="dCM-Zy-BxZ" eventType="touchUpInside" id="TTO-rT-I0I"/>
                                 </connections>
                             </button>
                         </subviews>

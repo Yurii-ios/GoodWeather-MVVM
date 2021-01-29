@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F13E1B2025C36127004CA537 /* WeatherListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13E1B1F25C36127004CA537 /* WeatherListViewModel.swift */; };
 		F1D5106F25C1940600C86AE7 /* WeatherListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D5106E25C1940600C86AE7 /* WeatherListTableViewController.swift */; };
 		F1D5107325C194B600C86AE7 /* AddWeatherCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D5107225C194B600C86AE7 /* AddWeatherCityViewController.swift */; };
 		F1D5107925C1D47A00C86AE7 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D5107825C1D47A00C86AE7 /* WeatherCell.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F13E1B1F25C36127004CA537 /* WeatherListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListViewModel.swift; sourceTree = "<group>"; };
 		F1D5106E25C1940600C86AE7 /* WeatherListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListTableViewController.swift; sourceTree = "<group>"; };
 		F1D5107225C194B600C86AE7 /* AddWeatherCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeatherCityViewController.swift; sourceTree = "<group>"; };
 		F1D5107825C1D47A00C86AE7 /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F13E1B1E25C360E6004CA537 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F13E1B1F25C36127004CA537 /* WeatherListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		F1D5106D25C1937A00C86AE7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +97,7 @@
 		F1EB394925C0C1A0007526A0 /* GoodWeather-MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				F13E1B1E25C360E6004CA537 /* ViewModels */,
 				F1D5107C25C21EDE00C86AE7 /* Services */,
 				F1D5107725C1D3E100C86AE7 /* CustomCells */,
 				F1D5106D25C1937A00C86AE7 /* Controllers */,
@@ -173,6 +184,7 @@
 				F1D5107E25C21F2200C86AE7 /* WebService.swift in Sources */,
 				F1D5106F25C1940600C86AE7 /* WeatherListTableViewController.swift in Sources */,
 				F1EB394B25C0C1A0007526A0 /* AppDelegate.swift in Sources */,
+				F13E1B2025C36127004CA537 /* WeatherListViewModel.swift in Sources */,
 				F1D5107925C1D47A00C86AE7 /* WeatherCell.swift in Sources */,
 				F1D5107325C194B600C86AE7 /* AddWeatherCityViewController.swift in Sources */,
 				F1EB394D25C0C1A1007526A0 /* SceneDelegate.swift in Sources */,
