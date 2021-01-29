@@ -8,29 +8,18 @@
 import Foundation
 
 struct WeatherListViewModel {
-    private var weatherViewModels = [WeatherViewModel]()
+    private var weatherViewModels = [WeatherModel]()
     
-}
-
-
-struct WeatherViewModel: Decodable {
-    let name: String
-    let currentTemperature: TemperatureVM
-    
-    private enum CodingKeys: String, CodingKey {
-        case name
-        case currentTemperature = "main"
+    mutating func addWeatherViewModel(_ viewModel: WeatherModel) {
+        self.weatherViewModels.append(viewModel)
     }
-}
-
-struct TemperatureVM: Decodable {
-    let temperature: Double
-    let temperatureMin: Double
-    let temperatureMax: Double
     
-    private enum CodingKeys: String, CodingKey {
-        case temperature = "temp"
-        case temperatureMin = "temp_min"
-        case temperatureMax = "temp_max"
+    func numberOfRows(_ section: Int) -> Int {
+        return self.weatherViewModels.count
     }
+    
+    func cellForRowAt(_ index: Int) -> WeatherModel {
+        return self.weatherViewModels[index]
+    }
+    
 }
