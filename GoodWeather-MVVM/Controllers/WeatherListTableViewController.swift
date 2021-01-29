@@ -31,13 +31,9 @@ extension WeatherListTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? WeatherCel
         guard let cells = cell else { return WeatherCel() }
-       
-        let weatherVM = self.weatherListViewModel.cellForRowAt(indexPath.row)
         
-        cells.cityNameLabel.text = weatherVM.name
-        cells.cityNameLabel.textColor = UIColor(displayP3Red: 52/255, green: 152/255, blue: 219/255, alpha: 1.0)
-        cells.temperatureLabel.text = "\(weatherVM.currentTemperature.temperature)"
-        cells.temperatureLabel.textColor = UIColor(displayP3Red: 52/255, green: 152/255, blue: 219/255, alpha: 1.0)
+        let weatherVM = self.weatherListViewModel.cellForRowAt(indexPath.row)
+        cell?.configure(weatherVM)
         return cells
     }
     
