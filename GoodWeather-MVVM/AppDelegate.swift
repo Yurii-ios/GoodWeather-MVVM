@@ -17,7 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(displayP3Red: 52/255, green: 152/255, blue: 219/255, alpha: 1.0)]
         UIBarButtonItem.appearance().tintColor = UIColor.black
+        
+        setupDefaultSettings()
         return true
+    }
+    
+    private func setupDefaultSettings() {
+        let userDefaults = UserDefaults.standard
+        if userDefaults.value(forKey: "unit") == nil {
+            userDefaults.setValue(Unit.farenheite.rawValue, forKey: "unit")
+        }
     }
 
     // MARK: UISceneSession Lifecycle

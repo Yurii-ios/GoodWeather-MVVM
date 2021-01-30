@@ -34,14 +34,27 @@ extension SettingsTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "settingsCell", for: indexPath)
         let settingsItem = self.settingsViewModel.units[indexPath.row]
+        
         cell.textLabel?.text = settingsItem.displayName
+        
+        if settingsItem == self.settingsViewModel.selectedUnit {
+            cell.accessoryType = .checkmark
+        }
+
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        // uncheck all cells
+        tableView.visibleCells.forEach { (cell) in
+            cell.accessoryType = .none
+        }
+        
         if let cell = tableView.cellForRow(at: indexPath) {
             cell.accessoryType = .checkmark
+            let unit = Unit.allCases[indexPath.row]
+            self.settingsViewModel.selectedUnit = unit
         }
     }
     
