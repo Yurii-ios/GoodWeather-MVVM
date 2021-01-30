@@ -13,7 +13,7 @@ class WeatherListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.prefersLargeTitles = true
+       self.navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
 
@@ -46,6 +46,17 @@ extension WeatherListTableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toAddCityIdentifier" {
+            prepareSegueForAddWeatherCity(segue: segue)
+            
+        } else if segue.identifier == "toSettingsIdentifier" {
+            prepareSegueForSettings(segue: segue)
+        }
+    }
+    
+    private func prepareSegueForAddWeatherCity(segue: UIStoryboardSegue) {
+       
         guard let navController = segue.destination as? UINavigationController else {
             fatalError("NavigationController not found.")
         }
@@ -54,6 +65,10 @@ extension WeatherListTableViewController {
             fatalError("AddWeatherCityViewController not found.")
         }
         addWeatherCityVC.delegate = self
+    }
+    
+    private func prepareSegueForSettings(segue: UIStoryboardSegue) {
+        
     }
 }
 
