@@ -9,7 +9,7 @@ import UIKit
 
 struct WeatherModel: Decodable {
     let name: String
-    let currentTemperature: TemperatureVM
+    var currentTemperature: TemperatureVM
     
     private enum CodingKeys: String, CodingKey {
         case name
@@ -18,7 +18,7 @@ struct WeatherModel: Decodable {
 }
 
 struct TemperatureVM: Decodable {
-    let temperature: Double
+    var temperature: Double
     let temperatureMin: Double
     let temperatureMax: Double
     
