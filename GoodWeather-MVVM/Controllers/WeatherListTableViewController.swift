@@ -68,7 +68,21 @@ extension WeatherListTableViewController {
     }
     
     private func prepareSegueForSettings(segue: UIStoryboardSegue) {
+        guard let navController = segue.destination as? UINavigationController else {
+            fatalError("NavigationController not found.")
+        }
         
+        guard let settingsTVC = navController.viewControllers.first as? SettingsTableViewController else {
+            fatalError("AddWeatherCityViewController not found.")
+        }
+        settingsTVC.delegate = self
+    }
+}
+
+//MARK: - SettingsDelegate
+extension WeatherListTableViewController: SettingsDelegate {
+    func settingsDone(viewModel: SettingsViewModel) {
+        print("Settings done")
     }
 }
 

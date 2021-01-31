@@ -7,9 +7,14 @@
 
 import UIKit
 
+protocol SettingsDelegate {
+    func settingsDone(viewModel: SettingsViewModel)
+}
+
 class SettingsTableViewController: UITableViewController {
     
     private var settingsViewModel = SettingsViewModel()
+    var delegate: SettingsDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +23,9 @@ class SettingsTableViewController: UITableViewController {
     
     @IBAction func doneButton() {
         self.dismiss(animated: true, completion: nil)
+        if let delegate = self.delegate {
+            delegate.settingsDone(viewModel: self.settingsViewModel)
+        }
     }
 }
 
