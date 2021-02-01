@@ -54,11 +54,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="sectionIndexBackgroundColor" red="0.97556561231613159" green="0.98300284147262573" blue="0.95936638116836548" alpha="0.93205170280000005" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="90" id="C24-8U-Joc" customClass="WeatherCel" customModule="GoodWeather_MVVM" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="90"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="87" id="C24-8U-Joc" customClass="WeatherCell" customModule="GoodWeather_MVVM" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="87"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C24-8U-Joc" id="N9R-oW-QCe">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="87"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vss-9N-5Ys">
@@ -77,6 +77,8 @@
                                     <constraints>
                                         <constraint firstItem="vss-9N-5Ys" firstAttribute="top" secondItem="N9R-oW-QCe" secondAttribute="top" constant="30" id="7VT-hX-q6S"/>
                                         <constraint firstItem="jZ1-z8-1WF" firstAttribute="top" secondItem="N9R-oW-QCe" secondAttribute="top" constant="36" id="HSU-Rc-DFz"/>
+                                        <constraint firstAttribute="bottom" secondItem="vss-9N-5Ys" secondAttribute="bottom" constant="18" id="b4f-CU-Oc4"/>
+                                        <constraint firstAttribute="bottom" secondItem="jZ1-z8-1WF" secondAttribute="bottom" constant="24" id="cko-Vl-NYD"/>
                                         <constraint firstAttribute="trailing" secondItem="vss-9N-5Ys" secondAttribute="trailing" constant="20" symbolic="YES" id="sG8-hc-dat"/>
                                         <constraint firstItem="jZ1-z8-1WF" firstAttribute="leading" secondItem="N9R-oW-QCe" secondAttribute="leading" constant="20" symbolic="YES" id="tqo-wC-PWz"/>
                                         <constraint firstItem="vss-9N-5Ys" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jZ1-z8-1WF" secondAttribute="trailing" constant="8" symbolic="YES" id="wnD-fJ-oWE"/>
@@ -109,7 +111,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g4K-WF-Vvf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1230" y="78"/>
+            <point key="canvasLocation" x="1228.985507246377" y="77.678571428571431"/>
         </scene>
         <!--Add City-->
         <scene sceneID="XTd-8b-Wid">

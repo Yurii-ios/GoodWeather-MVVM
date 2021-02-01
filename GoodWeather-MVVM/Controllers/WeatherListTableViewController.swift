@@ -10,43 +10,46 @@ import UIKit
 class WeatherListTableViewController: UITableViewController {
     
     private var weatherListViewModel = WeatherListViewModel()
+    private var dataSource: WeatherDataSource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.dataSource = WeatherDataSource(self.weatherListViewModel)
+        self.tableView.dataSource = self.dataSource
     }
 }
 
-//MARK: - Table View Methods
-extension WeatherListTableViewController {
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return weatherListViewModel.numberOfRows(section)
-        
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? WeatherCel
-        guard let cells = cell else { return WeatherCel() }
-        
-        let weatherVM = self.weatherListViewModel.cellForRowAt(indexPath.row)
-        cell?.configure(weatherVM)
-        return cells
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
-    }
-    
-}
+////MARK: - Table View Methods
+//extension WeatherListTableViewController {
+//
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        return 1
+//    }
+//
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return weatherListViewModel.numberOfRows(section)
+//
+//    }
+//
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? WeatherCell
+//        guard let cells = cell else { return WeatherCell() }
+//
+//        let weatherVM = self.weatherListViewModel.cellForRowAt(indexPath.row)
+//        cell?.configure(weatherVM)
+//        return cells
+//    }
+//
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+//    }
+//
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 90
+//    }
+//
+//}
 
 //MARK: - Navigation
 extension WeatherListTableViewController {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F139A69625C8784B0069E475 /* WeatherDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F139A69525C8784B0069E475 /* WeatherDataSource.swift */; };
 		F13E1B2025C36127004CA537 /* WeatherListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13E1B1F25C36127004CA537 /* WeatherListViewModel.swift */; };
 		F16A30CE25C478D10059D95F /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16A30CD25C478D10059D95F /* WeatherViewModel.swift */; };
 		F16A30D225C47BEC0059D95F /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16A30D125C47BEC0059D95F /* Double+Extensions.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F139A69525C8784B0069E475 /* WeatherDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataSource.swift; sourceTree = "<group>"; };
 		F13E1B1F25C36127004CA537 /* WeatherListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListViewModel.swift; sourceTree = "<group>"; };
 		F16A30CD25C478D10059D95F /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		F16A30D125C47BEC0059D95F /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
@@ -59,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F139A69425C878070069E475 /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F139A69525C8784B0069E475 /* WeatherDataSource.swift */,
+			);
+			path = "Data Sources";
+			sourceTree = "<group>";
+		};
 		F13E1B1E25C360E6004CA537 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +142,7 @@
 		F1EB394925C0C1A0007526A0 /* GoodWeather-MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				F139A69425C878070069E475 /* Data Sources */,
 				F1AC741125C72CF700D12D7C /* Custom Controls */,
 				F13E1B1E25C360E6004CA537 /* ViewModels */,
 				F1D5107725C1D3E100C86AE7 /* CustomCells */,
@@ -220,6 +231,7 @@
 			files = (
 				F1D5107E25C21F2200C86AE7 /* WebService.swift in Sources */,
 				F1D5106F25C1940600C86AE7 /* WeatherListTableViewController.swift in Sources */,
+				F139A69625C8784B0069E475 /* WeatherDataSource.swift in Sources */,
 				F1EB394B25C0C1A0007526A0 /* AppDelegate.swift in Sources */,
 				F16A30D225C47BEC0059D95F /* Double+Extensions.swift in Sources */,
 				F13E1B2025C36127004CA537 /* WeatherListViewModel.swift in Sources */,
