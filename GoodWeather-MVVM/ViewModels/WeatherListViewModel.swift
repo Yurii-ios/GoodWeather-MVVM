@@ -8,9 +8,9 @@
 import Foundation
 
 struct WeatherListViewModel {
-    private var weatherViewModels = [WeatherModel]()
+    private var weatherViewModels = [WeatherViewModel]()
     
-    mutating func addWeatherViewModel(_ viewModel: WeatherModel) {
+    mutating func addWeatherViewModel(_ viewModel: WeatherViewModel) {
         self.weatherViewModels.append(viewModel)
     }
     
@@ -18,22 +18,22 @@ struct WeatherListViewModel {
         return self.weatherViewModels.count
     }
     
-    func cellForRowAt(_ index: Int) -> WeatherModel {
+    func cellForRowAt(_ index: Int) -> WeatherViewModel {
         return self.weatherViewModels[index]
     }
     
     mutating private func toCelsius() {
        weatherViewModels = weatherViewModels.map { viewModel in
-            var weatherModel = viewModel
-            weatherModel.currentTemperature.temperature = (weatherModel.currentTemperature.temperature - 32) * 5/9
+            let weatherModel = viewModel
+        weatherModel.currentTemperature.temperature.value = (weatherModel.currentTemperature.temperature.value - 32) * 5/9
             return weatherModel
         }
     }
     
     mutating private func toFarenheite() {
         weatherViewModels = weatherViewModels.map { viewModel in
-            var weatherModel = viewModel
-            weatherModel.currentTemperature.temperature = (weatherModel.currentTemperature.temperature * 9/5) + 32
+            let weatherModel = viewModel
+            weatherModel.currentTemperature.temperature.value = (weatherModel.currentTemperature.temperature.value * 9/5) + 32
             return weatherModel
         }
     }

@@ -12,10 +12,10 @@ class WeatherCel: UITableViewCell {
     @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
     
-    func configure(_ viewModel: WeatherModel) {
-        self.cityNameLabel.text = viewModel.name
+    func configure(_ viewModel: WeatherViewModel) {
+        self.cityNameLabel.text = viewModel.name.value
         self.cityNameLabel.textColor = UIColor(displayP3Red: 52/255, green: 152/255, blue: 219/255, alpha: 1.0)
-        self.temperatureLabel.text = viewModel.currentTemperature.temperature.formatAsDegree
+        self.temperatureLabel.text = viewModel.currentTemperature.temperature.value.formatAsDegree
         self.temperatureLabel.textColor = UIColor(displayP3Red: 52/255, green: 152/255, blue: 219/255, alpha: 1.0)
 
     }

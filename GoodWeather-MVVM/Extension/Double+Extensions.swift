@@ -9,6 +9,6 @@ import UIKit
 
 extension Double {
     var formatAsDegree: String{
-        return String(format: "%.0f°C", self)
+        return String(format: "%.0f°", self)
     }
 }

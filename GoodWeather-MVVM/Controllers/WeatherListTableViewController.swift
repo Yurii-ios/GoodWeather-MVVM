@@ -13,10 +13,11 @@ class WeatherListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
 
+//MARK: - Table View Methods
 extension WeatherListTableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -45,6 +46,11 @@ extension WeatherListTableViewController {
         return 90
     }
     
+}
+
+//MARK: - Navigation
+extension WeatherListTableViewController {
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "toAddCityIdentifier" {
@@ -52,11 +58,14 @@ extension WeatherListTableViewController {
             
         } else if segue.identifier == "toSettingsIdentifier" {
             prepareSegueForSettings(segue: segue)
+        } else if segue.identifier == "toWeatherDetailsIdentifier" {
+            prepareSegueForWeatherDetailsVievController(segue: segue)
         }
-    }
+     }
     
+    // toAddCityIdentifier
     private func prepareSegueForAddWeatherCity(segue: UIStoryboardSegue) {
-       
+        
         guard let navController = segue.destination as? UINavigationController else {
             fatalError("NavigationController not found.")
         }
@@ -67,22 +76,33 @@ extension WeatherListTableViewController {
         addWeatherCityVC.delegate = self
     }
     
+    // toSettingsIdentifier
     private func prepareSegueForSettings(segue: UIStoryboardSegue) {
         guard let navController = segue.destination as? UINavigationController else {
             fatalError("NavigationController not found.")
         }
         
         guard let settingsTVC = navController.viewControllers.first as? SettingsTableViewController else {
-            fatalError("AddWeatherCityViewController not found.")
+            fatalError("SettingsTableViewController not found.")
         }
         settingsTVC.delegate = self
+    }
+    
+    // toWeatherDetailsIdentifier
+    private func prepareSegueForWeatherDetailsVievController(segue: UIStoryboardSegue) {
+    
+        guard let weatherDetailVC = segue.destination as? WeatherDetailsViewController, let indexPath = self.tableView.indexPathForSelectedRow else {
+            fatalError("WeatherDetailsViewController not found.")
+        }
+        let weatherViewModel = self.weatherListViewModel.cellForRowAt(indexPath.row)
+        weatherDetailVC.weatherViewmodel = weatherViewModel
     }
 }
 
 //MARK: - SettingsDelegate
 extension WeatherListTableViewController: SettingsDelegate {
     func settingsDone(viewModel: SettingsViewModel) {
-
+        
         self.weatherListViewModel.updateUnit(to: viewModel.selectedUnit)
         self.tableView.reloadData()
     }
@@ -90,7 +110,7 @@ extension WeatherListTableViewController: SettingsDelegate {
 
 //MARK: - AddWeatherDelegate
 extension WeatherListTableViewController: AddWeatherDelegate {
-    func addWeatherDidSave(viewModel: WeatherModel) {
+    func addWeatherDidSave(viewModel: WeatherViewModel) {
         
         self.weatherListViewModel.addWeatherViewModel(viewModel)
         self.tableView.reloadData()

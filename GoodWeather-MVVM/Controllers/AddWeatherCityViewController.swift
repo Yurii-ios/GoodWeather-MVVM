@@ -8,7 +8,7 @@
 import UIKit
 
 protocol AddWeatherDelegate {
-    func addWeatherDidSave(viewModel: WeatherModel)
+    func addWeatherDidSave(viewModel: WeatherViewModel)
 }
 
 class AddWeatherCityViewController: UIViewController {
@@ -38,15 +38,16 @@ class AddWeatherCityViewController: UIViewController {
         if let city = cityNameTextField.text {
             let weatherURL = URL(string:"https://api.openweathermap.org/data/2.5/weather?q=\(city)&units=metric&lang=en&appid=9b6a277834a6cb0fcfd48f14dbb91b5f")!
             
-            let weatherResource = Resource<WeatherModel>(url: weatherURL) { (data)  in
+            let weatherResource = Resource<WeatherViewModel>(url: weatherURL) { (data)  in
                 
-                let weatherVM = try? JSONDecoder().decode(WeatherModel.self, from: data)
+                let weatherVM = try? JSONDecoder().decode(WeatherViewModel.self, from: data)
                 return weatherVM
             }
             
             WebService().load(resource: weatherResource) { [weak self] (result) in
                 if let weatherVM = result {
                     if let delegate = self?.delegate {
+
                         delegate.addWeatherDidSave(viewModel: weatherVM)
                         self?.dismiss(animated: true, completion: nil)
                     }
