@@ -15,8 +15,8 @@ class WeatherListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.dataSource = TableViewDataSource(cellIdentifier: "cell", items: self.weatherListViewModel.weatherViewModels) { [weak self] cell, viewModel in
-            guard let weakSelf = self else { return }
+        self.dataSource = TableViewDataSource(cellIdentifier: "cell", items: self.weatherListViewModel.weatherViewModels) { cell, viewModel in
+           
             cell.cityNameLabel.text = viewModel.name.value
             cell.temperatureLabel.text = viewModel.currentTemperature.temperature.value.formatAsDegree
         }
