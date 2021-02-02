@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setupDefaultSettings() {
         let userDefaults = UserDefaults.standard
         if userDefaults.value(forKey: "unit") == nil {
-            userDefaults.setValue(Unit.farenheite.rawValue, forKey: "unit")
+            userDefaults.setValue(Unit.fahrenheit.rawValue, forKey: "unit")
         }
     }
 

@@ -14,6 +14,7 @@
 		F16A30E325C487330059D95F /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16A30E225C487330059D95F /* SettingsTableViewController.swift */; };
 		F16A30E625C4A5340059D95F /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16A30E525C4A5340059D95F /* SettingsViewModel.swift */; };
 		F1A939C525C963F300DFAEE7 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A939C425C963F300DFAEE7 /* TableViewDataSource.swift */; };
+		F1A93A1325C9FB2B00DFAEE7 /* SettingsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A93A1225C9FB2B00DFAEE7 /* SettingsViewModelTest.swift */; };
 		F1AC740F25C72C7A00D12D7C /* AddCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC740E25C72C7A00D12D7C /* AddCityViewModel.swift */; };
 		F1AC741325C72D3300D12D7C /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC741225C72D3300D12D7C /* BindingTextField.swift */; };
 		F1AC741625C7488300D12D7C /* WeatherDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC741525C7488300D12D7C /* WeatherDetailsViewController.swift */; };
@@ -28,6 +29,16 @@
 		F1EB395725C0C1A1007526A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1EB395525C0C1A1007526A0 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F1A93A0B25C9FA0E00DFAEE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1EB393F25C0C1A0007526A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1EB394625C0C1A0007526A0;
+			remoteInfo = "GoodWeather-MVVM";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		F139A69525C8784B0069E475 /* WeatherDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataSource.swift; sourceTree = "<group>"; };
 		F13E1B1F25C36127004CA537 /* WeatherListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListViewModel.swift; sourceTree = "<group>"; };
@@ -36,6 +47,9 @@
 		F16A30E225C487330059D95F /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		F16A30E525C4A5340059D95F /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		F1A939C425C963F300DFAEE7 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		F1A93A0625C9FA0E00DFAEE7 /* GoodWeather-MVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoodWeather-MVVMTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1A93A0A25C9FA0E00DFAEE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1A93A1225C9FB2B00DFAEE7 /* SettingsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelTest.swift; sourceTree = "<group>"; };
 		F1AC740E25C72C7A00D12D7C /* AddCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewModel.swift; sourceTree = "<group>"; };
 		F1AC741225C72D3300D12D7C /* BindingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingTextField.swift; sourceTree = "<group>"; };
 		F1AC741525C7488300D12D7C /* WeatherDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +67,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F1A93A0325C9FA0E00DFAEE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1EB394425C0C1A0007526A0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -89,6 +110,15 @@
 				F16A30D125C47BEC0059D95F /* Double+Extensions.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		F1A93A0725C9FA0E00DFAEE7 /* GoodWeather-MVVMTests */ = {
+			isa = PBXGroup;
+			children = (
+				F1A93A1225C9FB2B00DFAEE7 /* SettingsViewModelTest.swift */,
+				F1A93A0A25C9FA0E00DFAEE7 /* Info.plist */,
+			);
+			path = "GoodWeather-MVVMTests";
 			sourceTree = "<group>";
 		};
 		F1AC741125C72CF700D12D7C /* Custom Controls */ = {
@@ -130,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				F1EB394925C0C1A0007526A0 /* GoodWeather-MVVM */,
+				F1A93A0725C9FA0E00DFAEE7 /* GoodWeather-MVVMTests */,
 				F1EB394825C0C1A0007526A0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -138,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				F1EB394725C0C1A0007526A0 /* GoodWeather-MVVM.app */,
+				F1A93A0625C9FA0E00DFAEE7 /* GoodWeather-MVVMTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,6 +197,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F1A93A0525C9FA0E00DFAEE7 /* GoodWeather-MVVMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1A93A0F25C9FA0E00DFAEE7 /* Build configuration list for PBXNativeTarget "GoodWeather-MVVMTests" */;
+			buildPhases = (
+				F1A93A0225C9FA0E00DFAEE7 /* Sources */,
+				F1A93A0325C9FA0E00DFAEE7 /* Frameworks */,
+				F1A93A0425C9FA0E00DFAEE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F1A93A0C25C9FA0E00DFAEE7 /* PBXTargetDependency */,
+			);
+			name = "GoodWeather-MVVMTests";
+			productName = "GoodWeather-MVVMTests";
+			productReference = F1A93A0625C9FA0E00DFAEE7 /* GoodWeather-MVVMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F1EB394625C0C1A0007526A0 /* GoodWeather-MVVM */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1EB395B25C0C1A1007526A0 /* Build configuration list for PBXNativeTarget "GoodWeather-MVVM" */;
@@ -188,9 +238,13 @@
 		F1EB393F25C0C1A0007526A0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1230;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
+					F1A93A0525C9FA0E00DFAEE7 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = F1EB394625C0C1A0007526A0;
+					};
 					F1EB394625C0C1A0007526A0 = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -210,11 +264,19 @@
 			projectRoot = "";
 			targets = (
 				F1EB394625C0C1A0007526A0 /* GoodWeather-MVVM */,
+				F1A93A0525C9FA0E00DFAEE7 /* GoodWeather-MVVMTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F1A93A0425C9FA0E00DFAEE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1EB394525C0C1A0007526A0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -228,6 +290,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F1A93A0225C9FA0E00DFAEE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1A93A1325C9FB2B00DFAEE7 /* SettingsViewModelTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1EB394325C0C1A0007526A0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -253,6 +323,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F1A93A0C25C9FA0E00DFAEE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F1EB394625C0C1A0007526A0 /* GoodWeather-MVVM */;
+			targetProxy = F1A93A0B25C9FA0E00DFAEE7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		F1EB395025C0C1A1007526A0 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -273,6 +351,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F1A93A0D25C9FA0E00DFAEE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GoodWeather-MVVMTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sameliuk.GoodWeather-MVVMTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoodWeather-MVVM.app/GoodWeather-MVVM";
+			};
+			name = Debug;
+		};
+		F1A93A0E25C9FA0E00DFAEE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GoodWeather-MVVMTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sameliuk.GoodWeather-MVVMTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoodWeather-MVVM.app/GoodWeather-MVVM";
+			};
+			name = Release;
+		};
 		F1EB395925C0C1A1007526A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -428,6 +546,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F1A93A0F25C9FA0E00DFAEE7 /* Build configuration list for PBXNativeTarget "GoodWeather-MVVMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1A93A0D25C9FA0E00DFAEE7 /* Debug */,
+				F1A93A0E25C9FA0E00DFAEE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F1EB394225C0C1A0007526A0 /* Build configuration list for PBXProject "GoodWeather-MVVM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

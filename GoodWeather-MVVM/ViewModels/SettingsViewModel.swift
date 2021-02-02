@@ -9,7 +9,7 @@ import UIKit
 
 enum Unit: String, CaseIterable {
     case celsius = "metric"
-    case farenheite = "imperial"
+    case fahrenheit = "imperial"
 }
 
 extension Unit {
@@ -18,8 +18,8 @@ extension Unit {
             switch self {
             case .celsius:
                 return "Celsius"
-            case .farenheite:
-                return "Farenheite"
+            case .fahrenheit:
+                return "Fahrenheit"
             }
         }
     }
@@ -27,7 +27,7 @@ extension Unit {
 
 struct SettingsViewModel {
     let units = Unit.allCases
-    private var _selectedUnit: Unit = Unit.farenheite
+    private var _selectedUnit: Unit = Unit.celsius
     
     var selectedUnit: Unit {
         get {

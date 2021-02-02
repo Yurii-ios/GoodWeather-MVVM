@@ -43,7 +43,7 @@ class WeatherListViewModel {
         switch unit {
         case .celsius:
             toCelsius()
-        case .farenheite:
+        case .fahrenheit:
             toFarenheite()
         }
     }
